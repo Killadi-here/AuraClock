@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/widget_root_container">
+
+    <!-- The actual paintable canvas area -->
+    <ImageView
+        android:id="@+id/widget_canvas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:contentDescription="AuraClock Theme View" />
+
+    <!-- Transparent Interactive Partition Overlays to capture precise gestures -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:baselineAligned="false">
+
+        <!-- Tap Zone 1: Launches core Application Dashboard (Left portion) -->
+        <FrameLayout
+            android:id="@+id/widget_zone_app"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.6"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- Tap Zone 2: Shift Themes instantly (Middle right portion) -->
+        <FrameLayout
+            android:id="@+id/widget_zone_theme"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- Tap Zone 3: Manually Update Weather / Refresh Alarms (Far right portion) -->
+        <FrameLayout
+            android:id="@+id/widget_zone_refresh"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </LinearLayout>
+</FrameLayout>

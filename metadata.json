@@ -1,0 +1,6 @@
+{
+  "name": "Clock & Weather Widgets",
+  "description": "A beautifully customized clock and live weather widget dashboard with themes, alarm scheduling, interactive gestures, and low battery consumption.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
