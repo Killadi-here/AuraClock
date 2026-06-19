@@ -1,0 +1,10 @@
+workflows:
+  android-app:
+    name: AuraClock Android Build
+    max_build_duration: 30
+    scripts:
+      - name: Build Android APK
+        script: |
+          ./gradlew assembleDebug
+    artifacts:
+      - app/build/outputs/**/*.apk
