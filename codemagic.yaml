@@ -3,8 +3,9 @@ workflows:
     name: AuraClock Android Build
     max_build_duration: 30
     scripts:
-      - name: Build Android APK
+      - name: Generate Gradle Wrapper and Build APK
         script: |
+          gradle wrapper
           ./gradlew assembleDebug
     artifacts:
       - app/build/outputs/**/*.apk
