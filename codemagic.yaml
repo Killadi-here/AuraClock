@@ -5,7 +5,7 @@ workflows:
     scripts:
       - name: Generate Gradle Wrapper and Build APK
         script: |
-          gradle wrapper
+          gradle wrapper --gradle-version 9.3.1
           ./gradlew assembleDebug
     artifacts:
       - app/build/outputs/**/*.apk
